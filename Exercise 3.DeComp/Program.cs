@@ -28,7 +28,6 @@ namespace Exercise3.DeComp
                 {
                     using (var compressor = new GZipStream(outFile, CompressionMode.Decompress))
                     {
-                        //inFile.CopyTo(compressor);
                     }
                 }
             }

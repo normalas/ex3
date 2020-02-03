@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# CA1801: Parameter args of method Main is never used. Remove the parameter or use it in the method body.
+dotnet_diagnostic.CA1801.severity = silent
+
+# IDE0040: Add accessibility modifiers
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
