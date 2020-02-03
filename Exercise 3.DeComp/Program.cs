@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO.Compression;
 using static System.IO.File;
 
-namespace Exercise_3.DeComp
+namespace Exercise3.DeComp
 {
     class Program
     {
@@ -22,11 +22,13 @@ namespace Exercise_3.DeComp
             {
                 inFileSizeInBytes = inFile.Length;
 
-                using (var outFile = Create(FileToDecompress))
+                // This was the easiest (?) way I could figure out (or, you know, more-or-less directly copy from the sample)
+                // to do the decompression.
+                using (var outFile = Create(FileToDecompress.Remove((FileToDecompress.Length-8)) +"_new.txt"))
                 {
                     using (var compressor = new GZipStream(outFile, CompressionMode.Decompress))
                     {
-                        inFile.CopyTo(compressor);
+                        //inFile.CopyTo(compressor);
                     }
                 }
             }

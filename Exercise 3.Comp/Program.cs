@@ -4,7 +4,7 @@ using System.IO.Compression;
 using System.IO;
 using Humanizer.Bytes;
 
-namespace Exercise_3
+namespace Exercise3
 {
     class Program
     {
